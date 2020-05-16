@@ -40,4 +40,67 @@ a_float = 5.5  # float values are decimal numbers
 
 # -------------------------------------------------------------------------
 # lesson 8: Calculations
-print(15 / 4)
+print(15 / 4)  # this converts integers to float answer
+
+# -------------------------------------------------------------------------
+# lesson 9: Using Variables as numbers
+quilt_width = 8
+quilt_length = 12
+print(quilt_width * quilt_length)
+quilt_length = 8  # change quilt length and recalculate
+print(quilt_width * quilt_length)
+
+# -------------------------------------------------------------------------
+# lesson 10: Exponents using **
+# Calculation of squares for quilts:
+# 6x6 quilt
+print(6**2)
+# 7x7 quilt
+print(7**2)
+# 8x8 quilt
+print(8**2)
+# How many squares for 6 people to have 6 quilts each that are 6x6?
+print(6**4)
+
+# -------------------------------------------------------------------------
+# lesson 11: Modulo/Modulus/%
+my_team = 27 % 4
+print(my_team)
+
+
+# -------------------------------------------------------------------------
+# lesson 12: concatenation
+string1 = "The wind, "
+string2 = "which had hitherto carried us along with amazing rapidity, "
+string3 = "sank at sunset to a light breeze; "
+string4 = "the soft air just ruffled the water and "
+string5 = "caused a pleasant motion among the trees as we approached the shore, "
+string6 = "from which it wafted the most delightful scent of flowers and hay."
+# Define message below:
+message = string1 + string2 + string3 + string4 + string5 + string6
+print(message)
+# also note that str() parses a number to a string
+
+# -------------------------------------------------------------------------
+# lesson 13: plus equals
+# plus equals can also be used for string concatenation to update the end of a string variable
+concat1 = "this is a python string"
+print(concat1)
+concat1 += "!"
+print(concat1)
+
+# -------------------------------------------------------------------------
+# lesson 14: multi-line strings
+# using three ''' or """ to enclose a super long string also allows you not to focus on
+to_you = '''Stranger, if you passing meet me and desire to speak to me, 
+why should you not speak to me?
+And why should I not speak to you?'''
+print(to_you)
+
+# -------------------------------------------------------------------------
+# lesson 15: short review
+my_age = 27
+half_my_age = (my_age / 2)
+greeting = "Hello there"
+name = "Dayna"
+greeting_with_name = greeting + ", " + name
