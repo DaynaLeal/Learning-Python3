@@ -103,7 +103,7 @@ for height in heights:
 print(can_ride_coaster)
 
 # ------------------------------------------------------------------------------------------
-# updating lists by iterating with for loop
+# List comprehension: updating lists by iterating with for loop
 celsius = [0, 10, 15, 32, -5, 27, 3]
 
 fahrenheit = [temp * (9/5) + 32 for temp in celsius]
