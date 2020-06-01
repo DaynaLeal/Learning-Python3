@@ -137,7 +137,7 @@ for transaction in transactions_clean:
 
 # print(customers)
 # print(sales)
-# print(thread_sold)
+print(thread_sold)
 
 total_sales = 0
 for sale in sales:
@@ -145,7 +145,32 @@ for sale in sales:
 # print(total_sales)
 
 thread_sold_split = []
+multiple_threads = []
+
+for thread in thread_sold:
+    if not ('&' in thread):
+        thread_sold_split.append(thread)
+    else:
+        multiple_threads.append(thread.split('&'))
+        for thread in multiple_threads:
+            for color in thread:
+                thread_sold_split.append(color)
+
+# print(thread_sold_split)
 
 
+def color_count(color):
+    count = 0
+    for thread in thread_sold_split:
+        if thread == color:
+            count += 1
+    return count
+
+
+print(color_count('white'))
+
+colors = ['red','yellow','green','white','black','blue','purple']
+for color in colors:
+    print("Thread Shed sold {} threads of {} thread today.".format(str(color_count(color)), color))
 
 
