@@ -71,3 +71,37 @@ print(plays)
 
 library = {'The Best Songs': plays, 'Sunday Feelings': {}}
 print(library)
+
+# --------------------------------------------------------------------------------------------
+# SECOND LESSON ON DICTIONARIES
+# --------------------------------------------------------------------------------------------
+
+zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
+
+print(zodiac_elements["earth"])
+print(zodiac_elements["fire"])
+
+# --------------------------------------------------------------------------------------------
+
+# check to see if key is in the dictionary before printing
+zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
+
+key_to_check = "energy"
+
+if key_to_check in zodiac_elements:
+    print(zodiac_elements["energy"])
+
+# --------------------------------------------------------------------------------------------
+
+# you can also use a try/except block to check
+caffeine_level = {"espresso": 64, "chai": 40, "decaf": 0, "drip": 120, "matcha": 30}
+
+key_check = "matcha"
+try:
+    print(caffeine_level[key_check])
+except:
+    print("Unknown Caffeine Level")
+
+# --------------------------------------------------------------------------------------------
+
+
