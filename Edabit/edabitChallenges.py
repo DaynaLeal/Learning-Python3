@@ -1,5 +1,5 @@
 def tri_area(base, height):
-    return (base * height)/2
+    return (base * height) / 2
 
 
 # -------------------------------------------------------------------------------------
@@ -35,9 +35,50 @@ def x_o(txt):
 
 def factorial(num):
     fact = 1
-    for i in range(1, num+1):
+    for i in range(1, num + 1):
         fact = fact * i
     return fact
 
+
 # -------------------------------------------------------------------------------------
 
+
+def unique_sort(lst):
+    bucket = []
+    for element in lst:
+        if element not in bucket:
+            bucket.append(element)
+    return sorted(bucket)
+
+
+# print(unique_sort([1, 2, 4, 3]))
+# print(unique_sort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2]))
+# -------------------------------------------------------------------------------------
+
+
+def setify(lst):
+    new_set = set(lst)
+    unique_lst = list(new_set)
+    return sorted(unique_lst)
+
+
+# -------------------------------------------------------------------------------------
+
+
+def reverse(arg):
+    if arg is True and isinstance(arg, bool):
+        return False
+    elif arg is False and isinstance(arg, bool):
+        return True
+    else:
+        return "boolean expected"
+
+
+# print(reverse(True))
+# print(reverse(False))
+# print(reverse(0))
+# print(reverse(None))
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
