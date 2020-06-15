@@ -80,5 +80,25 @@ def reverse(arg):
 # print(reverse(None))
 # -------------------------------------------------------------------------------------
 
+def average(lst):
+    bucket = 0
+    for num in lst:
+        bucket += num
+    total = bucket / len(lst)
+    return int(total)
+
+
+# print(average([1, 2, 3]))
+# print(average([34, 65, 12]))
+# print(average([13, 13, 13]))
+# print(average([5, 2, 3, 4, 1]))
+# -------------------------------------------------------------------------------------
+
+
+def counterpartCharCode(char):
+    swapped = char.swapcase()
+    return ord(swapped)
+
 
 # -------------------------------------------------------------------------------------
+
