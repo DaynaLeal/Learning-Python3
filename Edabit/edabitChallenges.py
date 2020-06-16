@@ -1,3 +1,6 @@
+import math
+
+
 def tri_area(base, height):
     return (base * height) / 2
 
@@ -98,6 +101,57 @@ def average(lst):
 def counterpartCharCode(char):
     swapped = char.swapcase()
     return ord(swapped)
+
+
+# -------------------------------------------------------------------------------------
+
+def next_in_line(lst, num):
+    if len(lst) >=1:
+        lst.append(num)
+        lst.pop(0)
+        return lst
+    else:
+        return "No list has been selected"
+
+
+# print(next_in_line([5, 6, 7, 8, 9], 1))
+# print(next_in_line([7, 6, 3, 23, 17], 10))
+
+# -------------------------------------------------------------------------------------
+
+
+def to_degree(radian):
+    return math.ceil(radian * (180/math.pi))
+
+
+# -------------------------------------------------------------------------------------
+
+
+def profit_margin(cost_price, sales_price):
+    percentage = 100 - ((cost_price / sales_price) * 100)
+    rounded = round(percentage, 1)
+    return str(rounded) + "%"
+
+
+# print(profit_margin(50, 50))
+# print(profit_margin(28, 39))
+# print(profit_margin(33, 84))
+# -------------------------------------------------------------------------------------
+
+def name_shuffle(txt):
+    lst = txt.split()
+    return lst[1] + " " + lst[0]
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
 
 
 # -------------------------------------------------------------------------------------
