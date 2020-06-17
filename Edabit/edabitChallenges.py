@@ -1,4 +1,5 @@
 import math
+import datetime
 
 
 def tri_area(base, height):
@@ -145,7 +146,41 @@ def name_shuffle(txt):
 # -------------------------------------------------------------------------------------
 
 
+def time_for_milk_and_cookies(date):
+    return date.day == 24 and date.month == 12
+
+
 # -------------------------------------------------------------------------------------
+
+
+def length(txt):
+    if txt == "":
+        return 0
+    else:
+        return 1 + length(txt[1:])
+
+
+# -------------------------------------------------------------------------------------
+
+
+def alphabet_soup(txt):
+    lst = [letter for letter in txt]
+    return ''.join(sorted(lst))
+
+
+# -------------------------------------------------------------------------------------
+
+
+def binary(decimal):
+    binary_str = bin(decimal)
+    return binary_str[2:]
+
+
+# -------------------------------------------------------------------------------------
+
+
+def triangle(n):
+    return (n * (n + 1)) / 2
 
 
 # -------------------------------------------------------------------------------------
