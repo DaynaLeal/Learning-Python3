@@ -1,5 +1,6 @@
 import math
 import datetime
+import string
 
 
 def tri_area(base, height):
@@ -217,13 +218,69 @@ def count_ones(num):
 # -------------------------------------------------------------------------------------
 
 
+def is_vowel_sandwich(s):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if len(s) != 3:
+        return False
+    else:
+        if s[1] in vowels and s[0] not in vowels and s[2] not in vowels:
+            return True
+        else:
+            return False
+
+
+# print(is_vowel_sandwich("cat"))  # ➞ True
+# print(is_vowel_sandwich("ear"))  # ➞ False
+# print(is_vowel_sandwich("bake"))  # ➞ False
+# print(is_vowel_sandwich("try"))  # ➞ False
 # -------------------------------------------------------------------------------------
 
 
-# -------------------------------------------------------------------------------------
+def how_many_times(msg):
+    bucket = 0
+    letters = string.ascii_lowercase
+    for character in msg:
+        for i in range(0, len(letters)):
+            if character == letters[i]:
+                bucket += (i + 1)
+    return bucket
 
 
 # -------------------------------------------------------------------------------------
+
+
+def halve_count(a, b):
+    count = 0
+    while (a/2) > b:
+        a /= 2
+        count += 1
+    return count
+
+
+# -------------------------------------------------------------------------------------
+
+
+def equal(a, b, c):
+    count = 0
+    if a == b or a == c:
+        count += 2
+        if b == c:
+            count += 1
+    elif b == c:
+        count += 2
+    return count
+
+
+# -------------------------------------------------------------------------------------
+
+
+def count_vowels(txt):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for letter in txt:
+        if letter in vowels:
+            count += 1
+    return count
 
 
 # -------------------------------------------------------------------------------------
