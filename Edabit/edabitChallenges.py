@@ -284,3 +284,63 @@ def count_vowels(txt):
 
 
 # -------------------------------------------------------------------------------------
+
+
+def index_of_caps(word):
+    bucket = []
+    for i in range(0, len(word)):
+        if word[i].isupper():
+            bucket.append(i)
+    return bucket
+
+
+# -------------------------------------------------------------------------------------
+
+
+# import math
+
+def cone_volume(h, r):
+    volume = (math.pi * r**2 * h)/3
+    return round(volume, 2)
+
+
+# -------------------------------------------------------------------------------------
+
+
+def alphanumeric_restriction(s):
+    return s.isnumeric() or s.isalpha()
+
+
+# -------------------------------------------------------------------------------------
+
+
+def letter_counter(lst, letter):
+    count = 0
+    for partial_list in lst:
+        for character in partial_list:
+            if letter == character:
+                count += 1
+    return count
+
+
+# -------------------------------------------------------------------------------------
+
+
+def doubled_pay(n):
+    total_pennies = 0
+    base_pay = 1
+    for i in range(1, n+1):
+        if i == 1:
+            total_pennies += 1
+        if i > 1:
+            base_pay *= 2
+            total_pennies += base_pay
+    return total_pennies
+
+
+# print(doubled_pay(1))
+# print(doubled_pay(2))
+# print(doubled_pay(3))
+# print(doubled_pay(4))
+# print(doubled_pay(5))
+# -------------------------------------------------------------------------------------
