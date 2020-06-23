@@ -344,3 +344,37 @@ def doubled_pay(n):
 # print(doubled_pay(4))
 # print(doubled_pay(5))
 # -------------------------------------------------------------------------------------
+
+
+def filter_list(lst):
+    bucket = []
+    for element in lst:
+        if isinstance(element, int):
+            bucket.append(element)
+    return bucket
+
+
+# -------------------------------------------------------------------------------------
+
+
+def get_student_names(students):
+    value_lst = students.values()
+    return sorted(value_lst)
+
+
+# -------------------------------------------------------------------------------------
+
+
+def is_symmetrical(num):
+    str_num = str(num)
+    reversed_num = reversed(str_num)
+    return str_num == reversed_num
+
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
