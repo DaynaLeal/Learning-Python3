@@ -374,7 +374,25 @@ def is_symmetrical(num):
 # -------------------------------------------------------------------------------------
 
 
+# str,int=int,str #de-drunk
+def int_to_str(num):
+    return str(num)
+
+
+def str_to_int(num):
+    return int(num)
+
+
 # -------------------------------------------------------------------------------------
+# Write a function that removes any non-letters from a string, returning a well-known film title.
+
+
+def letters_only(txt):
+    bucket = []
+    for letter in txt:
+        if letter.isalpha():
+            bucket.append(letter)
+    return ''.join(bucket)
 
 
 # -------------------------------------------------------------------------------------
