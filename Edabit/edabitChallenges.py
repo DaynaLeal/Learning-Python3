@@ -1,6 +1,7 @@
 import math
 import datetime
 import string
+import re
 
 
 def tri_area(base, height):
@@ -393,6 +394,55 @@ def letters_only(txt):
         if letter.isalpha():
             bucket.append(letter)
     return ''.join(bucket)
+
+
+# -------------------------------------------------------------------------------------
+
+txt = "Hello!... Wait. How goes?..... GoodBye!.."
+pattern = "\.{3,}"
+re.findall(pattern, txt)
+# print(re.findall(pattern, txt))
+
+# -------------------------------------------------------------------------------------
+# Write a function that searches a list of names (unsorted) for the name "Bob" and returns the location in the list.
+# If Bob is not in the array, return -1.
+
+
+def find_bob(names):
+    try:
+        index_true = names.index("Bob")
+        return index_true
+    except ValueError as ve:
+        return -1
+
+
+# -------------------------------------------------------------------------------------
+# Return the sum of all items in a list, where each item is multiplied by its index (zero-based).
+# For empty lists, return 0.
+
+
+def index_multiplier(lst):
+    bucket = 0
+    for i in range(len(lst)):
+        bucket += (lst[i] * i)
+    return bucket
+
+
+# refactored version using enumerate()
+# def index_multiplier(lst):
+#     return sum(j*i for i, j in enumerate(lst))
+
+# -------------------------------------------------------------------------------------
+# Write a function that finds the sum of the first n natural numbers. Make your function recursive.
+
+
+def sum_numbers(n):
+    if n <= 1:
+        return n
+    else:
+        return n + sum_numbers(n - 1)
+
+# -------------------------------------------------------------------------------------
 
 
 # -------------------------------------------------------------------------------------
